@@ -10,12 +10,13 @@ class Character(ABC):
         self.is_alive = True
 
     def die(self):
-        """Kill the character"""
+        """The Character dies abruptly like everyone \
+in this show, don't get attached to quick..."""
         self.is_alive = False
 
 
 class Stark(Character):
-    """Class <Stark(Character)>"""
+    """class Starck: the most northern family"""
     def __init__(self, name):
-        """Create a member of Stark Family"""
+        """Winter is coming..."""
         super().__init__(name)
