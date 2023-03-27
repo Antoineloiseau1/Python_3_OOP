@@ -6,19 +6,23 @@ class calculator():
 
     def __add__(self, object) -> None:
         """Add object to numbers"""
-        print([i + object for i in self.numbers])
+        self.numbers = [i + object for i in self.numbers]
+        print([i for i in self.numbers])
 
     def __mul__(self, object) -> None:
         """Multiply numbers by object"""
-        print([i * object for i in self.numbers])
+        self.numbers = [i * object for i in self.numbers]
+        print([i for i in self.numbers])
 
     def __sub__(self, object) -> None:
         """Substract object to numbers"""
-        print([i - object for i in self.numbers])
+        self.numbers = [i - object for i in self.numbers]
+        print([i for i in self.numbers])
 
     def __truediv__(self, object) -> None:
         """Divide numbers by object"""
         try:
-            print([i / object for i in self.numbers])
+            self.numbers = [i / object for i in self.numbers]
+            print([i for i in self.numbers])
         except ZeroDivisionError as msg:
             print("ZeroDivisionError:", msg)
